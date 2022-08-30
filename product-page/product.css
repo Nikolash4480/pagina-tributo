@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto+Slab&family=Zilla+Slab&family=Montserrat&display=swap');
+:root {
+   --white: #ECE9E9;
+   --white-coffe: #D5CFCD;
+   --coffe-toast: #363333;
+   --coffe-easy: #A59793;
+   --coffe-medium: #72615D;
+   
+   --fontTitle: 'Zilla Slab', serif;
+   --fontBody: 'Roboto Slab', serif;
+   --font3: 'Cinzel', serif;
+
+   --cafetera1: url(https://www.pexels.com/es-es/foto/olla-moka-gris-junto-a-taza-de-ceramica-blanca-sobre-mesa-de-madera-marron-593328/);
+   --taza: url(https://www.pexels.com/es-es/foto/cafeina-cafe-bebidas-tazas-8846857/);
+   --grano: url(https://www.pexels.com/es-es/foto/cafeina-cafe-marron-aromatico-10319208/);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: var(--white-coffe);
+   font-family: Montserrat;
+   transition: cubic-bezier(0.65,0.05,0.36,1);
+}
+
+h1 {
+   color: var(--coffe-toast);
+   font-family: var(--fontTitle);
+   font-size: 28px;
+   text-transform: uppercase;
+}
+
+p {
+   color: var(--coffe-toast);
+   font-family: var(--fontBody);
+   font-size: 16px;
+   font-weight: 400;
+}
+/*------SECCION DE NAVBAR------*/
+#header {
+   position: fixed;
+   top: 0;
+   height: 80px;
+   width: 100%;
+   z-index: 9;
+}
+
+#nav-bar {
+   justify-content: left;
+   display: flex;
+   background:rgba(0, 0, 0, 0.2);
+   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+   width: 100%;
+   height: 70px;
+   line-height: 70px;
+}
+.logo {
+   display: flex;
+   text-align: center;
+   position: relative;
+}
+
+.logo h1{
+   cursor: default;
+   text-transform: none;
+   text-decoration: none;
+   position: relative;
+   margin: 0 10px;
+   font-size: 2rem;
+   font-family: var(--fontTitle);
+   color: var(--white);
+}
+
+.logo i {
+   font-size: 24px;
+   line-height: 70px;
+   margin-right: 20px;
+   color: var(--white);
+}
+.nav-link {  
+   color: var(--white);
+   font-size: 1.2rem;
+   text-align: center;
+   text-decoration: none;
+   position: relative;
+   margin: 0 10px;
+}
+.nav-link:hover {
+   color: var(--coffe-easy);
+}
+
+/*------SECCION DE HERO------*/
+#hero {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+}
+#hero img {
+   height: auto;
+   width: auto;
+   max-width: 100%;
+}
+#hero .title-form {
+   right: 5em;
+   font-family: var(--fontTitle);
+   display: flex;
+   align-items: center;
+   position: absolute;
+   flex-direction: column;
+}
+#hero .title-form h1 {
+   font-size: 28px;
+   color: var(--white-coffe);
+}
+
+#hero .title-form form {
+   overflow: hidden;
+}
+#hero .title-form form input {
+   margin-top: 10px;
+   padding: 15px 20px;
+   text-align: center;
+   font-family: inherit;
+   font-size: 1rem;
+   letter-spacing: 0.05rem;
+   outline: 0;
+}
+
+[type=email] {
+   width: 300px;
+   background: none;
+   border: 1px solid var(--coffe-medium);
+   border-radius: 10px 0 0 10px;
+   color: var(--white-coffe);
+}  
+
+[type=submit] {
+   background: var(--coffe-medium);
+   color: var(--white-coffe);
+   border-radius: 0 10px 10px 0;
+   border: 1px solid var(--coffe-medium);
+}  
+
+[type=submit]:hover {
+   cursor: pointer;
+   border: 1px solid var(--coffe-easy);
+   background: var(--coffe-easy);
+   color: var(--coffe-toast);
+   transition: (all .4s);
+}
+
+/*------SECCION DE ABOUT------*/
+#About {
+   height: 70vh;
+   width: 100%;
+   padding-top: 50px;
+   justify-content: center;
+   display: grid;
+   grid-template-columns: repeat(2, 40%);
+   column-gap: 10%;
+}
+.about-us {
+   align-items: flex-start;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 25%;
+}
+.about-us h1 {
+   padding: 3%;
+   margin: 1%;
+   border-left: 2px solid var(--coffe-toast);
+}
+.img-container {
+   width: auto;
+   height: auto;
+   max-height: 350px;
+   justify-content: center;
+   align-items: center;
+   padding: 15px;
+}
+.img1 {
+   position: relative;
+   border-left: 2px dashed var(--coffe-toast);
+   border-top: 2px dashed var(--coffe-toast);
+}
+
+.img2 {
+   position: absolute;
+   transform: translate(-80px, 30%);
+   border-right: 2px dashed var(--coffe-toast);
+   border-bottom: 2px dashed var(--coffe-toast); 
+}
+
+/* 
+https://pixabay.com/es/photos/cafetera-francesa-embolo-prensa-2220369/
+ */
+
+/*------SECCION DE PRODUCT------*/
+#Product {
+   padding: 5%;
+   height: 100vh;
+   width: 100%;
+   text-align: center;
+   justify-content: center;
+   display: flex;
+   background: var(--coffe-toast); 
+}
+
+#Product h1 {
+   color: var(--white-coffe);
+   padding: 5%;
+   margin: 3%;
+   border-top: 2px solid var(--white-coffe);
+}
+.card-container {
+   display: grid;
+   grid-template-columns: repeat(3, 50%);
+   justify-content: center;
+   align-items: center;
+}
+.card {
+   display: flex;
+   overflow: hidden;
+   position: relative;
+   width: 250px;
+   height: 370px;
+   background: var(--coffe-medium);
+   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+   transition: 0.5s ease-in-out;
+}
+.card:hover {
+   width: 500px;
+}
+.card .imgCoffe {
+   position: relative;
+   min-width: 250px;
+   height: 100%;
+   background: transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+.card .imgCoffe img {
+   max-width: 250px;
+   transition: 0.5s ease-in-out;
+}
+
+.card:hover .imgCoffe img {
+   transform: scale(1.2);
+   
+}
+.card .details {
+   position: relative;
+   min-width: 300px;
+   height: 100%;
+   background: var(--coffe-easy);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   flex-direction: column;
+}
+
+.card .details::before {
+   content: '';
+   position: absolute;
+   left: 0;
+   width: 0;
+   height: 0;
+   border-top: 10px solid transparent;
+   border-bottom: 10px solid transparent;
+   border-left: 10px solid var(--coffe-toast);
+}

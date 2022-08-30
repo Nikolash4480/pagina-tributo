@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Photo Adventure</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    :root {
+        --color-white: #f3f3f3;
+        --color-darkblue: #1b1b32;
+        --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+        --color-green: #37af65;
+        --image: url(https://images.pexels.com/photos/13172083/pexels-photo-13172083.jpeg?cs=srgb&dl=pexels-andrew-neel-13172083.jpg&fm=jpg);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--color-white);
+        margin: 0;
+    }
+    
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background: var(--color-darkblue);
+        background-image: linear-gradient(115deg, rgba(17, 17, 17, 0.74), rgba(0, 0, 0, 0.3) ), url(https://images.pexels.com/photos/13172083/pexels-photo-13172083.jpeg?cs=srgb&dl=pexels-andrew-neel-13172083.jpg&fm=jpg);
+        filter: blur(1.5px);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+	    align-items: center;
+	    justify-content: center;
+    }
+
+    /* @media (min-width: 768px) {
+        .container {
+            max-width: 720px;
+        }
+    }
+    @media (min-width: 576px) {
+        .container {
+            max-width: 540px;
+        }
+    }  */
+
+    .grid-form {
+        display: grid;
+        grid-template-areas:
+        'photo form';
+        grid-auto-columns: repeat(2, 2fr);  
+    }
+
+    .photo-left { 
+        grid-area: photo;
+        overflow: hidden;
+        margin-left: 2rem;
+    }
+
+    .img-left {
+        width: 630px;
+        height: 600px;
+        border-radius: 10px 0 0 10px;
+        transform: scale(1.5);
+    }
+
+    .form-right { 
+        grid-area: form;
+        background: rgba(17, 17, 17, 0.74);
+        border-radius: 0 10px 10px 0;
+        padding: 2rem;
+        padding-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    header {
+        padding: 0 0.625rem;
+        margin-bottom: 1.875rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    #title {
+        font-weight: 400;
+        line-height: 1.2;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    #description {
+        font-style: italic;
+        font-weight: 200;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    }
+    
+    .description {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-group {
+        margin: 1rem;
+    }
+
+    .form-group label {
+        font-size: 18px;
+    }
+
+    .form-group input{
+        margin: 5px;
+        padding: 8px;
+        list-style: none;
+        font-family: Montserrat;
+    }
+
+    .name-form input {
+        width: 200px;
+    }
+
+    .email-form input {
+        width: 300px;
+    }
+
+    #name-label {
+        margin: 0;
+    }
+
+    #dropdown {
+        margin: 0;
+        padding: 5px;
+        width: 9rem;
+    }
+
+    .checkbox-group {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    [type="checkbox"] {display: none;}
+
+    .checkbox-group label {
+        position: relative;
+        padding-left: 1.3em;
+    }
+
+    .checkbox-group label::before {
+        content: '';
+        border: solid 1px var(--color-white);
+        border-radius: 3px;
+        width: 0.8em;
+        height: 0.8em;
+        position: absolute;
+        left: 0;
+        top: 0.3em;
+        transition: all 0.2s;
+        transform: rotate(0deg);
+    }
+
+    [type="checkbox"]:checked ~ .checkbox-group label::before {
+        border-color: var(--color-darkblue);
+        color: var(--color-darkblue);
+        content: '\f00c';
+        font-family: FontAwesome;
+        transform: rotate(360deg);
+    }
+
+    .group-textarea {
+        width: 300px;
+        display: flex;
+    }
+
+    .group-submit {
+        width: 100px;
+        height: 30px;
+        border: none;
+        transition: all 0.5s;
+    }
+    .group-submit:hover {
+        background: var(--color-green);
+        color: var(--color-white);
+        transition: all 0.5s;
+    }
+</style>
+<body> 
+    <div class="container">
+        <div class="grid-form">
+            <div class="photo-left">
+                <img class="img-left" src="https://images.pexels.com/photos/13172083/pexels-photo-13172083.jpeg?cs=srgb&dl=pexels-andrew-neel-13172083.jpg&fm=jpg" alt="">
+            </div>
+            <div class="form-right">
+                <header>
+                    <h1 id="title" class="text-center">Photo Adventure Form</h1>
+                    <p id="description" class="description text-center">We share photographs of professionals from different parts of the world</p>
+                </header>
+                <main>
+                    <form id="survey-form">
+                        <div class="form-group name-form">
+                            <label id="name-label" for="name">Name</label>
+                            <input id="name" type="text" name="Name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group email-form">
+                            <label id="email-label" for="email">Email</label>
+                            <input id="email" type="email" name="Email" placeholder="Enter your Email" required>
+                        </div>
+                        <div class="form-group number-form">
+                            <label id="number-label" for="number">Age <span>(optional)</span></label>
+                            <input id="number"type="number" name="Number" min="10" max="99" placeholder="Age">
+                        </div>
+                        <div class="form-group">
+                            <label for="definitely">
+                                <input class="group-radio" id="definitely" type="radio" value="definitely" name="Definitely-maybe-notsure" checked> Casual 
+                            </label>
+                            <label for="maybe">
+                                <input class="group-radio" id="maybe" type="radio" value="maybe" name="Definitely-maybe-notsure" checked> Photographer 
+                            </label>
+                            <label for="notsure">
+                                <input class="group-radio" id="notsure" type="radio" value="notsure" name="Definitely-maybe-notsure" checked> Professional Photographer
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <select id="dropdown" name="" required>
+                                <option disabled selected value="">Select current zone</option>
+                                <option value="Japan">Japan</option>
+                                <option value="England">England</option>
+                                <option value="France">France</option>
+                                <option value="EE.UU">EE.UU</option>
+                                <option value="Argentine">Argentine</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p>
+                                What would you like to see improved? 
+                                <span class="span-check"> (Check all that apply)</span>
+                            </p>
+                            <div class="checkbox-group">
+                                <label for="Landscapes">
+                                    <input class="group-checkbox" type="checkbox" value="Landscapes" id="Landscapes">
+                                    Landscapes
+                                </label>
+                                <label for="Culture">
+                                    <input class="group-checkbox" type="checkbox" value="Culture" id="Culture">
+                                    Culture
+                                </label>
+                                <label for="Community">
+                                    <input class="group-checkbox" type="checkbox" value="Community" id="Community">
+                                    Community
+                                </label>
+                                <label for="Gastronomy">
+                                    <input class="group-checkbox" type="checkbox" value="Gastronomy" id="Gastronomy">
+                                    Gastronomy
+                                </label>
+                                <label for="Arquitecture">
+                                    <input class="group-checkbox" type="checkbox" value="Arquitecture" id="Arquitecture">
+                                    Arquitecture
+                                </label>
+                                <label for=" Sports">
+                                    <input class="group-checkbox" type="checkbox" value="Sports" id="Sports">
+                                    Sports 
+                                </label>
+                                <label for="Rustic">
+                                    <input class="group-checkbox" type="checkbox" value="Rustic" id="Rustic">
+                                    Rustic
+                                </label> 
+                                <label for="Vintage">
+                                    <input class="group-checkbox" type="checkbox" value="Vintage" id="Vintage">
+                                    Vintage
+                                </label>                              
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p>Any comments or suggestions?</p>
+                            <textarea class="group-textarea" name="comment" id="comments" placeholder="Enter your comment here..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button id="submit" class="group-submit" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
