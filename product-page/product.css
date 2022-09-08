@@ -15,6 +15,10 @@
    --grano: url(https://www.pexels.com/es-es/foto/cafeina-cafe-marron-aromatico-10319208/);
 }
 
+html {
+   scroll-behavior: smooth;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -133,7 +137,7 @@ p {
    outline: 0;
 }
 
-[type=email] {
+#hero [type=email] {
    width: 300px;
    background: none;
    border: 1px solid var(--coffe-medium);
@@ -141,14 +145,14 @@ p {
    color: var(--white-coffe);
 }  
 
-[type=submit] {
+#hero [type=submit] {
    background: var(--coffe-medium);
    color: var(--white-coffe);
    border-radius: 0 10px 10px 0;
    border: 1px solid var(--coffe-medium);
 }  
 
-[type=submit]:hover {
+#hero [type=submit]:hover {
    cursor: pointer;
    border: 1px solid var(--coffe-easy);
    background: var(--coffe-easy);
@@ -208,37 +212,63 @@ https://pixabay.com/es/photos/cafetera-francesa-embolo-prensa-2220369/
    padding: 5%;
    height: 100vh;
    width: 100%;
-   text-align: center;
    justify-content: center;
    display: flex;
    background: var(--coffe-toast); 
 }
 
 #Product h1 {
+   text-align: center;
    color: var(--white-coffe);
-   padding: 5%;
-   margin: 3%;
    border-top: 2px solid var(--white-coffe);
+   width: 150px;
 }
+
 .card-container {
+   height: 90vh;
+   width: 100%;
    display: grid;
-   grid-template-columns: repeat(3, 50%);
+   grid-template-columns: repeat(3, 33%);
+   gap: 50px;
    justify-content: center;
    align-items: center;
 }
+
 .card {
+   color: var(--white);
    display: flex;
    overflow: hidden;
    position: relative;
    width: 250px;
    height: 370px;
-   background: var(--coffe-medium);
+   background: var(--coffe-toast);
    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
-   transition: 0.5s ease-in-out;
 }
+
 .card:hover {
    width: 500px;
+   transition: 0.7s ease-in-out;
 }
+
+.cardMoka {transition: 0.7s ease-in-out;}
+.cardPrensa {transition: 0.7s ease-in-out;}
+.cardFiltro {transition: 0.7s ease-in-out;}
+
+.cardMoka:hover {
+   transform: translateX(-130px);
+   transition: 0.7s ease-in-out;
+}
+
+.cardPrensa:hover {
+   transform: translateX(-130px);
+   transition: 0.5s ease-in-out;
+}
+
+.cardFiltro:hover {
+   transform: translateX(-130px);
+   transition: 0.5s ease-in-out;
+}
+
 .card .imgCoffe {
    position: relative;
    min-width: 250px;
@@ -261,12 +291,12 @@ https://pixabay.com/es/photos/cafetera-francesa-embolo-prensa-2220369/
 }
 .card .details {
    position: relative;
-   min-width: 300px;
+   min-width: 250px;
    height: 100%;
-   background: var(--coffe-easy);
+   background: var(--coffe-medium);
    display: flex;
    justify-content: center;
-   align-items: center;
+   /* align-items: center; */
    padding: 20px;
    flex-direction: column;
 }
@@ -280,4 +310,121 @@ https://pixabay.com/es/photos/cafetera-francesa-embolo-prensa-2220369/
    border-top: 10px solid transparent;
    border-bottom: 10px solid transparent;
    border-left: 10px solid var(--coffe-toast);
+}
+
+.card .details h3 {
+   color: var(--white-coffe);
+   text-transform: uppercase;
+   font-weight: 600;
+   font-size: 1.5em;
+}
+
+.card .details h3 span {
+   font-size: 1em;
+   font-weight: 300;
+   text-transform: none;
+}
+
+.card .details h4 {
+   text-transform: uppercase;
+   font-weight: 600;
+   font-size: 0.9em;
+   margin-top: 20px;
+   margin-bottom: 10px;
+   line-height: 1em;
+}
+
+.form-group {
+   display: flex;
+   gap: 20px;
+}
+
+.card .details .form-group {
+   list-style: none;
+   font-size: 1em;
+   width: 40px;
+   height: 40px;
+   display: flex;
+}
+
+.card .details .form-group input {
+   align-items: center;
+   justify-content: center;
+   display: flex;
+}
+
+/*------SECCION DE MATERIALS------*/
+
+/*------SECCION DE CONTACT------*/
+#Contact {
+   padding: 5%;
+   height: 100vh;
+   width: 100%;
+   background: var(--coffe-toast); 
+}
+
+#Contact h1 {
+   width: 150px;
+   text-align: center;
+   color: var(--white-coffe);
+   border-bottom: 2px solid var(--white-coffe);
+}
+.title-product {
+   top: 40px;
+}
+
+.text-center {
+   text-align: center;
+}
+
+#survey-form {
+   display: grid;
+   grid-template-columns: repeat(2, 40%);
+   align-items: center;
+   justify-content: center;
+}
+
+.description {
+   margin-top: 0;
+   margin-bottom: 0.5rem;
+}
+
+.form-group {
+   margin: 1rem;
+}
+
+.form-group label {
+   font-size: 18px;
+}
+
+.form-group input{
+   margin: 5px;
+   padding: 8px;
+   list-style: none;
+   font-family: Montserrat;
+}
+
+.name-form input {
+   width: 200px;
+}
+
+.email-form input {
+   width: 300px;
+}
+
+.group-textarea {
+   width: 300px;
+   display: flex;
+}
+
+.group-submit {
+   width: 100px;
+   height: 30px;
+   border: none;
+   transition: all 0.5s;
+}
+.group-submit:hover {
+   background: var(--coffe-toast);
+   color: var(--white);
+   transition: all 0.5s;
 }

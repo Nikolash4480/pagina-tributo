@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="/product-page/product.css">
+   <link rel="stylesheet" href="/product.css">
    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
    <title>Product Landing Page</title>
 </head>
@@ -26,7 +26,7 @@
       </nav>
    </header>
    <section id="hero">
-      <img src="/product-page/imagenes/pexels-taryn-elliott-6861142.jpg" alt="">
+      <img src="/imagenes/pexels-taryn-elliott-6861142.jpg" alt="">
       <div class="title-form title">
          <h1>Subscribe to get the latest <span>news &amp; updates</span>.</h1>
          <form id="form" action="https://www.freecodecamp.com/email-submit">
@@ -41,42 +41,46 @@
          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, aut! Impedit nulla ducimus optio nobis, ex qui culpa id illo neque facere dignissimos eaque quas nam natus porro vero. Nobis iure est dicta, recusandae aliquid, explicabo tempora suscipit aperiam obcaecati sapiente labore quaerat, quam officiis ullam minima tempore necessitatibus corporis ea autem reiciendis sint! Illum repudiandae dolor inventore quasi eaque!</p>
       </div>
       <div class="images">
-         <img class="img-container img1" src="/product-page/imagenes/pexels-los-muertos-crew-7488694.jpg" alt="">
-         <img class="img-container img2" src="/product-page/imagenes/pexels-los-muertos-crew-7488698.jpg" alt="">
+         <img class="img-container img1" src="/imagenes/pexels-los-muertos-crew-7488694.jpg" alt="">
+         <img class="img-container img2" src="/imagenes/pexels-los-muertos-crew-7488698.jpg" alt="">
       </div>
    </section>
    
    <section id="Product">
-      <div class="title">
+      <div class="title-product">
          <h1>Product</h1>
       </div>
       <div class="card-container">
-         <div class="card">
+         <div class="card cardMoka">
             <div class="imgCoffe">
-               <img src="/product-page/imagenes/pexels-ekaterina-bolovtsova-5662295.jpg" alt="">
+               <img src="/imagenes/pexels-ekaterina-bolovtsova-5662295.jpg" alt="">
             </div>
             <div class="details">
-               <h3>coffee machine<br><span>Italian - Moka</span></h3>
+               <h3>Coffee Machine<br><span>Italian - Moka</span></h3>
                <h4>Color</h4>
-               <ul>
-                  <li>White</li>
-                  <li>Black</li>
-               </ul>
+               <div class="form-group">
+                  <label for="White">
+                     <input class="group-radio" id="White" type="radio" value="White" name="color-details" checked> White 
+                  </label>
+                  <label for="Black">
+                     <input class="group-radio" id="Black" type="radio" value="Black" name="color-details" checked> Black 
+                  </label>
+               </div>
                <div class="group">
                   <h2><sup>$</sup>599<small>.99</small></h2>
                   <a href="#">Buy Now</a>
                </div>
             </div>
          </div>
-         <div class="card">
+         <div class="card cardPrensa">
             <div class="imgCoffe">
-               <img src="/product-page/imagenes/pexels-los-muertos-crew-7488694.jpg" alt="">
+               <img src="/imagenes/pexels-los-muertos-crew-7488694.jpg" alt="">
             </div>
             <div class="details"></div>
          </div>
-         <div class="card">
+         <div class="card cardFiltro">
             <div class="imgCoffe">
-               <img src="/product-page/imagenes/pexels-miriam-alonso-7622841.jpg" alt="">
+               <img src="/imagenes/pexels-miriam-alonso-7622841.jpg" alt="">
             </div>
             <div class="details"></div>
          </div>
@@ -91,7 +95,35 @@
    </section>
 
    <section id="Contact">
-      
+      <div class="title">
+         <h1>Contact</h1>
+      </div>
+      <form id="survey-form">
+         <div class="form-group name-form">
+             <label id="name-label" for="name">Name</label>
+             <input id="name" type="text" name="Tame" placeholder="Enter your name" required>
+         </div>
+         <div class="form-group number-form">
+            <label id="Fullname-label" for="number">Fullname</label>
+            <input id="Fullname"type="text" name="Text" min="10" max="99" placeholder="Enter your Fullname">
+        </div>
+         <div class="form-group email-form">
+             <label id="email-label" for="email">Email</label>
+             <input id="email" type="email" name="Email" placeholder="Enter your Email" required>
+         </div>
+         <div class="form-group number-form">
+            <label id="Phone-label" for="number">Phone<span>(optional)</span></label>
+            <input id="Phone" type="text" name="Number" placeholder="Enter your Phone">
+        </div>
+         
+         <div class="form-group">
+             <p>Any comments or suggestions?</p>
+             <textarea class="group-textarea" name="comment" id="comments" placeholder="Enter your comment here..."></textarea>
+         </div>
+         <div class="form-group">
+             <button id="submit" class="group-submit" type="submit">Submit</button>
+         </div>
+     </form>
    </section>
    <footer>
       <!-- <video autoplay loop muted plays-inline class="back-video">
