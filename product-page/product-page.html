@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/product.css">
    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
    <title>Product Landing Page</title>
 </head>
 <body>
@@ -20,13 +21,13 @@
             <a class="nav-link" href="#hero">Home</a>
             <a class="nav-link" href="#About">About</a>
             <a class="nav-link" href="#Product">Product</a>
-            <a class="nav-link" href="#Materials">Materials</a> 
+            <!-- <a class="nav-link" href="#Materials">Materials</a> --> 
             <a class="nav-link" href="#Contact">Contact</a>
          </div>
       </nav>
    </header>
    <section id="hero">
-      <img src="/imagenes/pexels-taryn-elliott-6861142.jpg" alt="">
+      <img src="imagenes/pexels-taryn-elliott-6861142.jpg" alt="">
       <div class="title-form title">
          <h1>Subscribe to get the latest <span>news &amp; updates</span>.</h1>
          <form id="form" action="https://www.freecodecamp.com/email-submit">
@@ -41,8 +42,8 @@
          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, aut! Impedit nulla ducimus optio nobis, ex qui culpa id illo neque facere dignissimos eaque quas nam natus porro vero. Nobis iure est dicta, recusandae aliquid, explicabo tempora suscipit aperiam obcaecati sapiente labore quaerat, quam officiis ullam minima tempore necessitatibus corporis ea autem reiciendis sint! Illum repudiandae dolor inventore quasi eaque!</p>
       </div>
       <div class="images">
-         <img class="img-container img1" src="/imagenes/pexels-los-muertos-crew-7488694.jpg" alt="">
-         <img class="img-container img2" src="/imagenes/pexels-los-muertos-crew-7488698.jpg" alt="">
+         <img class="img-container img1" src="imagenes/pexels-los-muertos-crew-7488694.jpg" alt="">
+         <img class="img-container img2" src="imagenes/pexels-los-muertos-crew-7488698.jpg" alt="">
       </div>
    </section>
    
@@ -53,18 +54,28 @@
       <div class="card-container">
          <div class="card cardMoka">
             <div class="imgCoffe">
-               <img src="/imagenes/pexels-ekaterina-bolovtsova-5662295.jpg" alt="">
+               <img src="imagenes/pexels-ekaterina-bolovtsova-5662295.jpg" alt="">
             </div>
             <div class="details">
                <h3>Coffee Machine<br><span>Italian - Moka</span></h3>
                <h4>Color</h4>
                <div class="form-group">
-                  <label for="White">
+                  <div class="form-group-order">
+                     <!-- <i class='bx bx-checkbox'></i> -->
+                     <i class='bx bx-checkbox-square' ></i>
+                     <h5>White</h5>
+                  </div>
+                  <div class="form-group-order">
+                     <i class='bx bx-checkbox black'></i>
+                     <!-- <i class='bx bx-checkbox-square black' ></i> -->
+                     <h5 class='black'>Black</h5>
+                  </div>
+                  <!-- <label for="White">
                      <input class="group-radio" id="White" type="radio" value="White" name="color-details" checked> White 
                   </label>
                   <label for="Black">
                      <input class="group-radio" id="Black" type="radio" value="Black" name="color-details" checked> Black 
-                  </label>
+                  </label> -->
                </div>
                <div class="group">
                   <h2><sup>$</sup>599<small>.99</small></h2>
@@ -74,31 +85,110 @@
          </div>
          <div class="card cardPrensa">
             <div class="imgCoffe">
-               <img src="/imagenes/pexels-los-muertos-crew-7488694.jpg" alt="">
+               <img src="imagenes/pexels-los-muertos-crew-7488694.jpg" alt="">
             </div>
-            <div class="details"></div>
+            <div class="details">
+               <h3>Coffee Machine<br><span>France - Prensa</span></h3>
+               <h4>Color</h4>
+               <div class="form-group">
+                  <div>
+                     <i class='bx bx-checkbox-square' ></i>
+                     <h5>single colour</h5>
+                  </div>
+                  <!-- <label for="White">
+                     <input class="group-radio" id="White" type="radio" value="White" name="color-details" checked> White 
+                  </label>
+                  <label for="Black">
+                     <input class="group-radio" id="Black" type="radio" value="Black" name="color-details" checked> Black 
+                  </label> -->
+               </div>
+               <div class="group">
+                  <h2><sup>$</sup>699<small>.99</small></h2>
+                  <a href="#">Buy Now</a>
+               </div>
+            </div>
          </div>
          <div class="card cardFiltro">
             <div class="imgCoffe">
-               <img src="/imagenes/pexels-miriam-alonso-7622841.jpg" alt="">
+               <img src="imagenes/pexels-miriam-alonso-7622841.jpg" alt="">
             </div>
-            <div class="details"></div>
+            <div class="details">
+               <h3>filters<br><span>100 units</span></h3>
+               <h4>Color</h4>
+               <div class="form-group">
+                  <div>
+                     <i class='bx bx-checkbox'></i>
+                     <!-- <i class='bx bx-checkbox-square' ></i> -->
+                     <h5>White</h5>
+                  </div>
+                  <div>
+                     <!-- <i class='bx bx-checkbox black'></i> -->
+                     <i class='bx bx-checkbox-square black' ></i>
+                     <h5>Black</h5>
+                  </div>
+                  <!-- <label for="White">
+                     <input class="group-radio" id="White" type="radio" value="White" name="color-details" checked> White 
+                  </label>
+                  <label for="Black">
+                     <input class="group-radio" id="Black" type="radio" value="Black" name="color-details" checked> Black 
+                  </label> -->
+               </div>
+               <div class="group">
+                  <h2><sup>$</sup>119<small>.99</small></h2>
+                  <a href="#">Buy Now</a>
+               </div>
+            </div>
          </div>
       </div>
       <!-- <div class="video-container">
          <video id="video" src=""></video>
       </div> -->
    </section>
-
+<!-- 
    <section id="Materials">
       
    </section>
-
+ -->
    <section id="Contact">
       <div class="title">
          <h1>Contact</h1>
       </div>
-      <form id="survey-form">
+      <div class="contact">
+         <div class="containerContact">
+            <div class="contactMap">
+               <div class="row">
+                  <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.8829434139348!2d-59.198328784652595!3d-34.04687368060745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bba42a9e536351%3A0x4d420c6db46aa789!2sAv.%2011%20598%2C%20Lima%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1664290891041!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+            </div>
+            <div class="contactForm">
+               <form class="formBox" action="">
+                  <h3>get in touch</h3>
+                  <div class="inputBox w50">
+                     <input type="text" required>
+                     <span>name</span>
+                  </div>
+                  <div class="inputBox w50">
+                     <input type="text" required>
+                     <span>email</span>
+                  </div>
+                  <div class="inputBox w50">
+                     <input type="text" required>
+                     <span>number</span>
+                  </div>
+                  <div class="inputBox w100">
+                     <textarea maxlength="250"></textarea>
+                     <span>Write your message here...</span>
+                  </div>
+                  <div class="inputBox w100 btn-submit">
+                     <input type="submit" value="Contact Now">
+                     <div class="liquid"></div>
+                  </div>
+                  
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- <form id="survey-form">
          <div class="form-group name-form">
              <label id="name-label" for="name">Name</label>
              <input id="name" type="text" name="Tame" placeholder="Enter your name" required>
@@ -123,7 +213,9 @@
          <div class="form-group">
              <button id="submit" class="group-submit" type="submit">Submit</button>
          </div>
-     </form>
+      </form> -->
+
+      
    </section>
    <footer>
       <!-- <video autoplay loop muted plays-inline class="back-video">
